@@ -2,6 +2,10 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
 
+// you can enject the environment variables in docker at the time of running the image not hard-code it in the committing codebase
+
+// docker run -p 3000:3000 -e DATABASE_URL="your_databse_url" backend (your image name)
+
 const app = express();
 app.use(express.json());
 
